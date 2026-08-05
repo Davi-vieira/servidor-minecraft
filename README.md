@@ -62,7 +62,7 @@ servidor mine/
 ### Instalação em 1 comando
 
 ```bash
-git clone https://github.com/SEU_USUARIO/servidor-minecraft.git
+git clone https://github.com/Davi-vieira/servidor-minecraft.git
 cd servidor-minecraft
 chmod +x install.sh
 sudo ./install.sh
@@ -174,5 +174,5 @@ Por segurança e tamanho, os seguintes arquivos **não estão no repositório**:
 
 Desenvolvido por **Davi** — com Amazon Q Developer 🤖
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin)](https://linkedin.com/in/SEU_PERFIL)
-[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/SEU_USUARIO)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin)](https://linkedin.com/in/davi-vieira-sousa-740706343)
+[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/Davi-vieira)
