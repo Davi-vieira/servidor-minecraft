@@ -190,6 +190,52 @@ op SEU_NICK
 
 ---
 
+## 🛠️ Troubleshooting — Erros Comuns
+
+**❌ `Permission denied` ao rodar o install.sh`**
+```bash
+chmod +x install.sh
+sudo ./install.sh
+```
+
+**❌ `Java not found` ou versão errada**
+```bash
+sudo apt install openjdk-21-jre-headless
+java -version  # deve mostrar 21
+```
+
+**❌ PaperMC não baixou (API indisponível)**
+
+O `setup-server.sh` usa a versão `1.21.4 build 150` como fallback automático. Se ainda assim falhar, baixe manualmente em [papermc.io/downloads](https://papermc.io/downloads) e coloque o `.jar` na pasta do projeto.
+
+**❌ Jogadores Bedrock não conseguem conectar**
+- Confirme que o GeyserMC e Floodgate estão na pasta `plugins/`
+- Confirme que `online-mode=false` está no `server.properties`
+- A porta UDP 19132 precisa estar liberada (o Playit.gg faz isso automaticamente)
+
+**❌ Servidor não inicia como serviço**
+```bash
+sudo systemctl status minecraft  # ver o erro
+sudo journalctl -u minecraft -n 50  # ver os últimos logs
+```
+
+**❌ Erro `eula.txt` não aceito**
+```bash
+echo "eula=true" > /home/minecraft/minecraft-server/eula.txt
+```
+
+**❌ Pouca RAM / servidor travando**
+
+Edite o `start.sh` e ajuste o limite máximo de RAM:
+```bash
+# Linha ~18 do start.sh
+elif [ "$RECOMMENDED_RAM" -gt 4096 ]; then
+    RECOMMENDED_RAM=4096  # aumente este valor se tiver mais RAM disponível
+fi
+```
+
+---
+
 ## 📁 Arquivos não incluídos no repositório
 
 Por segurança e tamanho, os seguintes arquivos **não estão no repositório**:
