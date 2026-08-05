@@ -1,7 +1,27 @@
 ================================================================
   COMANDOS DE ADMIN E DONO - SERVIDOR MINECRAFT PAPERMC
-  Semente: 91276453817984294
-  Endereço: offers-nowhere.gl.joinmc.link
+================================================================
+
+  ⚠️  O QUE VOCÊ DEVE ALTERAR ANTES DE USAR
+  ─────────────────────────────────────────
+  1. SEU_NICK → seu nick no Minecraft (ex: Steve)
+     Usado nos comandos /lp, /op, etc.
+
+  2. Endereço do servidor → gerado pelo Playit.gg após instalar
+     Acesse playit.gg após rodar o install.sh para obter o seu
+
+  3. Semente do mundo → definida no server.properties
+     Troque o valor de level-seed por qualquer número
+     ou deixe em branco para gerar aleatoriamente
+
+  ─────────────────────────────────────────
+  Como virar admin no seu servidor:
+  1. Acesse o console: sudo systemctl stop minecraft
+  2. Inicie manualmente: sudo -u minecraft bash start.sh
+  3. Digite no console: op SEU_NICK
+  4. Agora use /lp user SEU_NICK parent set dono no jogo
+  ─────────────────────────────────────────
+
 ================================================================
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -58,10 +78,10 @@
   [DAR CARGO A JOGADOR]
 /lp user <nick> parent set <cargo>    - Dar cargo ao jogador
   Exemplos:
-  /lp user Davizck parent set dono
-  /lp user Davizck parent set admin
-  /lp user Davizck parent set vip
-  /lp user Davizck parent set membro
+  /lp user SEU_NICK parent set dono
+  /lp user SEU_NICK parent set admin
+  /lp user SEU_NICK parent set vip
+  /lp user SEU_NICK parent set membro
 
   [VER CARGO DO JOGADOR]
 /lp user <nick> info                  - Ver cargo e permissões do jogador
