@@ -1,0 +1,81 @@
+# ============================================================
+#  CONFIGURACAO AUTHME (config.yml)
+#  Colocar em: plugins/AuthMe/config.yml
+#  Este arquivo serve como referencia - sera gerado pelo plugin
+#  na primeira execucao. Sobrescreva apos o primeiro start.
+# ============================================================
+
+Settings:
+  language: pt_BR
+
+  Database:
+    backend: SQLITE
+    MySQL:
+      host: 127.0.0.1
+      port: 3306
+      dbname: authme
+      username: root
+      password: ''
+      table: authme
+      poolsize: 10
+
+  registration:
+    enabled: true
+    forced: true
+    minPasswordLength: 4
+    maxPasswordLength: 32
+    allowedCharacters: "^[a-zA-Z0-9!@#$%^&*()_+=\\-\\[\\]{}|;:,.<>?/]+$"
+    timeout: 120
+
+  Protection:
+    maxLogin:
+      try: 3
+      time: 10
+    spawn:
+      force-spawn: true
+      delay: 5
+
+  Session:
+    enabled: true
+    timeout: 0
+
+  Teleport:
+    onLogin: true
+    onJoin: false
+    delay: 0
+
+  Messages:
+    prefix: "&8[&6AuthMe&8] &7"
+
+  Commands:
+    register: "register"
+    login: "login"
+    chgpass: "changepassword"
+    recovery: "email"
+
+  Email:
+    enabled: false
+    email: ""
+
+  Purge:
+    enabled: true
+    days: 30
+
+# ============================================================
+#  INTEGRACAO FLOODGATE
+#  Jogadores Bedrock (prefixo ".") sao autenticados pelo
+#  Floodgate automaticamente e NAO precisam usar /register
+#  ou /login. O AuthMe deve ignorar esses jogadores.
+#
+#  Para ativar: instale o addon AuthMe-Floodgate ou configure
+#  a permissao authme.player.canbeforced para nao se aplicar
+#  a jogadores com o prefixo do Floodgate (padrao: ".")
+#
+#  Referencia: https://github.com/AuthMe-Team/AuthMeReloaded/wiki/Floodgate
+# ============================================================
+
+Hooks:
+  # Habilitar integracao com Floodgate
+  # Jogadores Bedrock serao bypassados automaticamente
+  useFloodgate: true
+  floodgateNeedAuth: false

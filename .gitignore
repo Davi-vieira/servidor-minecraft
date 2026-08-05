@@ -1,0 +1,38 @@
+# Jars do servidor e plugins (baixados automaticamente pelo setup-server.sh)
+*.jar
+
+# Configs com dados sensíveis
+authme-config.yml
+floodgate-config.yml
+infos.txt
+
+# Mundo gerado pelo servidor
+world/
+world_nether/
+world_the_end/
+
+# Logs
+logs/
+*.log
+
+# Cache e dados gerados
+cache/
+plugins/
+crash-reports/
+generated/
+
+# Arquivos do servidor em execução
+eula.txt
+banned-ips.json
+banned-players.json
+ops.json
+whitelist.json
+usercache.json
+session.lock
+
+# Playit agente binário
+playit
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

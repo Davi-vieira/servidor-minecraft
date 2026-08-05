@@ -1,0 +1,373 @@
+================================================================
+  COMANDOS DE ADMIN E DONO - SERVIDOR MINECRAFT PAPERMC
+  Semente: 91276453817984294
+  Endereço: offers-nowhere.gl.joinmc.link
+================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  COMO CONECTAR NO SERVIDOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [PC - Java]
+  1. Abre o Minecraft Java Edition (TLauncher com perfil Fabric 26.2)
+  2. Clica em Multijogador > Adicionar servidor
+  3. Endereço: offers-nowhere.gl.joinmc.link:25565
+  4. Entra no servidor
+  5. Digite /register <senha> <senha> para criar conta
+  6. Nas próximas vezes: /login <senha>
+
+  [CELULAR - Bedrock]
+  1. Abre o Minecraft (versão do celular)
+  2. Clica em Jogar > Servidores > Adicionar servidor
+  3. Endereço: offers-nowhere.gl.joinmc.link
+  4. Porta: 19132
+  5. Entra no servidor (login automático pelo Floodgate, sem senha)
+  OBS: Seu nick no servidor será .SeuNick (com ponto na frente)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  GERENCIAMENTO DE JOGADORES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/op <nick>                    - Dar permissão de operador (admin)
+/deop <nick>                  - Remover permissão de operador
+/kick <nick> [motivo]         - Expulsar jogador
+/ban <nick> [motivo]          - Banir jogador (permanente)
+/ban-ip <nick|ip> [motivo]    - Banir por IP
+/pardon <nick>                - Desbanir jogador
+/pardon-ip <ip>               - Desbanir IP
+/whitelist add <nick>         - Adicionar à whitelist
+/whitelist remove <nick>      - Remover da whitelist
+/whitelist on                 - Ativar whitelist
+/whitelist off                - Desativar whitelist
+/whitelist list               - Ver whitelist
+/list                         - Ver jogadores online
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  LUCKPERMS - CARGOS E PERMISSÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Cargos sugeridos (do menor para o maior):
+  membro > vip > mod > admin > dono
+
+  [CRIAR CARGO]
+/lp creategroup <cargo>               - Criar cargo
+  Exemplos:
+  /lp creategroup membro
+  /lp creategroup vip
+  /lp creategroup mod
+  /lp creategroup admin
+  /lp creategroup dono
+
+  [DAR CARGO A JOGADOR]
+/lp user <nick> parent set <cargo>    - Dar cargo ao jogador
+  Exemplos:
+  /lp user Davizck parent set dono
+  /lp user Davizck parent set admin
+  /lp user Davizck parent set vip
+  /lp user Davizck parent set membro
+
+  [VER CARGO DO JOGADOR]
+/lp user <nick> info                  - Ver cargo e permissões do jogador
+
+  [REMOVER CARGO]
+/lp user <nick> parent remove <cargo> - Remover cargo do jogador
+
+  [HERANÇA DE CARGOS (cargo herda permissões de outro)]
+/lp group <cargo> parent set <cargo_base>
+  Exemplo: /lp group admin parent set mod
+  (admin herda tudo que mod tem)
+
+  [DAR PERMISSÃO ESPECÍFICA A CARGO]
+/lp group <cargo> permission set <permissão> true
+  Exemplo: /lp group vip permission set graves.teleport true
+
+  [LISTAR CARGOS]
+/lp listgroups                        - Ver todos os cargos criados
+
+  [EDITOR WEB (mais fácil)]
+/lp editor                            - Abre link para editar tudo pelo navegador
+
+  [RECARREGAR]
+/lp reload                            - Recarregar LuckPerms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  TELEPORTE E LOCALIZAÇÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/tp <nick>                    - Teleportar para jogador
+/tp <nick1> <nick2>           - Teleportar nick1 para nick2
+/tp <x> <y> <z>               - Teleportar para coordenadas
+/tp <nick> <x> <y> <z>        - Teleportar jogador para coords
+/tphere <nick>                - Trazer jogador até você
+/spawn                        - Ir ao spawn
+/setworldspawn <x> <y> <z>    - Definir spawn do mundo
+/spawnpoint <nick> <x> <y> <z>- Definir spawn individual
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ITENS E INVENTÁRIO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/give <nick> <item> [qtd]     - Dar item ao jogador
+/clear <nick>                 - Limpar inventário
+/item enchant <encantamento> [nível] - Encantar item na mão
+/xp add <nick> <qtd> levels   - Dar XP (níveis)
+/xp set <nick> <qtd> levels   - Definir XP
+
+  Exemplos de itens úteis:
+  /give @s diamond 64
+  /give @s netherite_ingot 64
+  /give @s enchanted_golden_apple 64
+  /give @s netherite_sword
+  /give @s netherite_pickaxe
+  /give @s netherite_chestplate
+  /give @s elytra
+  /give @s totem_of_undying 16
+  /give @s shulker_box 27
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ARMADURAS COMPLETAS NETHERITE ENCANTADAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/give @s netherite_helmet{Enchantments:[{id:protection,lvl:4},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:respiration,lvl:3},{id:aqua_affinity,lvl:1}]} 1
+/give @s netherite_chestplate{Enchantments:[{id:protection,lvl:4},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:thorns,lvl:3}]} 1
+/give @s netherite_leggings{Enchantments:[{id:protection,lvl:4},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:swift_sneak,lvl:3}]} 1
+/give @s netherite_boots{Enchantments:[{id:protection,lvl:4},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:feather_falling,lvl:4},{id:depth_strider,lvl:3},{id:soul_speed,lvl:3}]} 1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FERRAMENTAS NETHERITE ENCANTADAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/give @s netherite_sword{Enchantments:[{id:sharpness,lvl:5},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:looting,lvl:3},{id:fire_aspect,lvl:2},{id:sweeping,lvl:3}]} 1
+/give @s netherite_pickaxe{Enchantments:[{id:efficiency,lvl:5},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:fortune,lvl:3}]} 1
+/give @s netherite_axe{Enchantments:[{id:efficiency,lvl:5},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:sharpness,lvl:5}]} 1
+/give @s netherite_shovel{Enchantments:[{id:efficiency,lvl:5},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:fortune,lvl:3}]} 1
+/give @s bow{Enchantments:[{id:power,lvl:5},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:flame,lvl:1},{id:infinity,lvl:1}]} 1
+/give @s crossbow{Enchantments:[{id:quick_charge,lvl:3},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:multishot,lvl:1}]} 1
+/give @s trident{Enchantments:[{id:loyalty,lvl:3},{id:unbreaking,lvl:3},{id:mending,lvl:1},{id:channeling,lvl:1},{id:riptide,lvl:3}]} 1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  MINÉRIOS (DAR PARA SI MESMO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/give @s diamond 64
+/give @s emerald 64
+/give @s ancient_debris 64
+/give @s netherite_ingot 64
+/give @s netherite_scrap 64
+/give @s gold_ingot 64
+/give @s iron_ingot 64
+/give @s coal 64
+/give @s lapis_lazuli 64
+/give @s redstone 64
+/give @s quartz 64
+/give @s amethyst_shard 64
+/give @s raw_diamond 64
+/give @s raw_gold 64
+/give @s raw_iron 64
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  MODO DE JOGO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/gamemode survival <nick>     - Modo sobrevivência
+/gamemode creative <nick>     - Modo criativo
+/gamemode adventure <nick>    - Modo aventura
+/gamemode spectator <nick>    - Modo espectador
+/defaultgamemode survival     - Padrão do servidor
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CLIMA E TEMPO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/time set day                 - Definir dia
+/time set night               - Definir noite
+/time set noon                - Meio-dia
+/time set midnight            - Meia-noite
+/time add 6000                - Avançar tempo
+/weather clear [duração]      - Limpar clima
+/weather rain [duração]       - Chuva
+/weather thunder [duração]    - Tempestade
+/gamerule doDaylightCycle false  - Travar ciclo dia/noite
+/gamerule doWeatherCycle false   - Travar clima
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  GAMERULES ÚTEIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/gamerule keepInventory true      - Manter inventário ao morrer
+/gamerule keepInventory false     - Perder inventário ao morrer (ativa GravesX)
+/gamerule doMobSpawning false     - Desativar spawn de mobs
+/gamerule doMobSpawning true      - Ativar spawn de mobs
+/gamerule mobGriefing false       - Mobs não destroem blocos
+/gamerule doFireTick false        - Fogo não se espalha
+/gamerule naturalRegeneration true- Regeneração natural de vida
+/gamerule pvp true/false          - Ativar/desativar PVP (via server.properties)
+/gamerule announceAdvancements false - Desativar anúncios de conquistas
+/gamerule commandBlockOutput false   - Silenciar command blocks
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  EFEITOS E VIDA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/effect give <nick> minecraft:saturation 99999 255 true   - Fome infinita
+/effect give <nick> minecraft:regeneration 99999 255 true - Regeneração
+/effect give <nick> minecraft:strength 99999 255 true     - Força máxima
+/effect give <nick> minecraft:speed 99999 10 true         - Velocidade
+/effect give <nick> minecraft:night_vision 99999 1 true   - Visão noturna
+/effect give <nick> minecraft:water_breathing 99999 1 true- Respirar na água
+/effect give <nick> minecraft:fire_resistance 99999 1 true- Resistência ao fogo
+/effect give <nick> minecraft:resistance 99999 4 true     - Resistência máxima
+/effect give <nick> minecraft:haste 99999 2 true          - Mineração rápida
+/effect clear <nick>                                      - Remover todos efeitos
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  GRIEFPREVENTION - PROTEÇÃO DE ÁREA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [JOGADOR] Segurar pá dourada e clicar em 2 cantos para criar claim
+
+/trust <nick>                 - Permitir jogador construir/quebrar na sua área
+/containertrust <nick>        - Permitir apenas abrir baús/usar itens
+/accesstrust <nick>           - Permitir apenas interagir (portas, botões)
+/untrust <nick>               - Remover permissão de jogador
+/untrust all                  - Remover todos da sua área
+/abandonclaim                 - Remover o claim onde está
+/abandonallclaims             - Remover todos os seus claims
+/claimlist                    - Ver lista de claims
+/claiminfo                    - Ver info do claim onde está
+/trapped                      - Sair se preso em claim alheio
+
+  [ADMIN]
+/deleteclaim                  - Deletar claim onde está (admin)
+/deleteallclaims <nick>       - Deletar todos claims de um jogador
+/claimslist <nick>            - Ver claims de outro jogador
+/givepet <nick>               - Transferir pet para jogador
+/gp reload                    - Recarregar configuração do GriefPrevention
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SETHOME - CASAS E TELEPORTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/sethome                      - Definir casa na posição atual
+/sethome <nome>               - Definir casa com nome específico
+/home                         - Teleportar para casa
+/home <nome>                  - Teleportar para casa específica
+/homes                        - Listar todas as casas
+/delhome                      - Remover casa padrão
+/delhome <nome>               - Remover casa específica
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  AUTHME - AUTENTICAÇÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [JOGADOR]
+/register <senha> <senha>     - Registrar conta
+/login <senha>                - Entrar no servidor
+/logout                       - Sair da conta
+/changepassword <atual> <nova>- Trocar senha
+
+  [ADMIN]
+/authme register <nick> <senha>      - Registrar jogador
+/authme unregister <nick>            - Desregistrar jogador
+/authme changepassword <nick> <senha>- Trocar senha de jogador
+/authme forcelogin <nick>            - Forçar login de jogador
+/authme accounts <nick>              - Ver contas do jogador
+/authme kick <nick>                  - Deslogar jogador
+/authme purge                        - Limpar contas inativas
+/authme reload                       - Recarregar AuthMe
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CHUNKY - PRÉ-GERAÇÃO DE MUNDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/chunky radius <número>       - Definir raio de geração (blocos)
+/chunky world <mundo>         - Selecionar mundo (world/world_nether/world_the_end)
+/chunky start                 - Iniciar pré-geração
+/chunky pause                 - Pausar geração
+/chunky continue              - Continuar geração pausada
+/chunky cancel                - Cancelar geração
+/chunky status                - Ver progresso atual
+
+  Exemplo para gerar 5000 blocos ao redor do spawn:
+  /chunky world world
+  /chunky radius 5000
+  /chunky start
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  GEYSER - SUPORTE BEDROCK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/geyser list                  - Ver jogadores Bedrock conectados
+/geyser reload                - Recarregar Geyser
+/geyser statistics            - Ver estatísticas de conexão
+/geyser version               - Ver versão do Geyser
+/geyser help                  - Ver todos os comandos
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  VIAVERSION - COMPATIBILIDADE DE VERSÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/viaversion info              - Ver versões suportadas
+/viaversion dump              - Gerar diagnóstico do servidor
+/viaversion reload            - Recarregar ViaVersion
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  GRAVESX - TÚMULOS AO MORRER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  [JOGADOR]
+  Clique direito no túmulo para pegar seus itens de volta
+
+/graves                       - Listar seus túmulos ativos e localização
+/graves teleport <id>         - Teleportar até o túmulo (requer permissão)
+
+  ATENÇÃO: Se keepInventory estiver true, túmulos não são criados!
+  Para ativar túmulos: /gamerule keepInventory false
+  Para desativar túmulos: /gamerule keepInventory true
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  VOICE CHAT - CHAT DE VOZ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Porta UDP: 24454 (deve estar aberta no roteador para uso externo)
+  Só funciona para jogadores Java (PC) - Bedrock não suportado
+
+  [JOGADOR - requer mod no cliente Fabric]
+  CAPS LOCK                   - Falar (push-to-talk padrão)
+  V                           - Abrir configurações de voz
+  Ícone de microfone na tela  - Indica que o mod está ativo
+
+/voicechat                    - Ver ajuda do plugin
+
+  [ADMIN]
+/voicechat help               - Ver todos os comandos admin
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SERVIDOR (CONSOLE SSH)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/stop                         - Parar servidor
+/reload confirm               - Recarregar plugins
+/save-all                     - Salvar mundo agora
+/save-off                     - Desativar auto-save
+/save-on                      - Ativar auto-save
+/difficulty peaceful          - Modo pacífico
+/difficulty easy              - Fácil
+/difficulty normal            - Normal
+/difficulty hard              - Difícil
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  COMANDOS VIA CONSOLE SSH (fora do jogo)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Acessar console do servidor:
+sudo -u minecraft screen -r mc
+
+# Sair do screen sem fechar: Ctrl+A depois D
+
+# Parar servidor:
+sudo systemctl stop minecraft
+
+# Iniciar servidor:
+sudo systemctl start minecraft
+
+# Reiniciar servidor:
+sudo systemctl restart minecraft
+
+# Ver logs em tempo real:
+sudo journalctl -u minecraft -f
+
+# Dar OP via console (sem estar no jogo):
+sudo -u minecraft screen -S mc -X stuff "op SEU_NICK\n"
+
+================================================================
+  INFORMAÇÕES DO SERVIDOR
+================================================================
+  IP Java:    offers-nowhere.gl.joinmc.link:25565
+  IP Bedrock: offers-nowhere.gl.joinmc.link:19132
+  Versão:     PaperMC 26.1.2
+  Plugins:    AuthMe, Floodgate, Geyser, GravesX, GriefPrevention,
+              LuckPerms, SetHome, ViaVersion, VoiceChat, Chunky, Playit-gg
+  Semente:    91276453817984294
+  RAM:        ~2GB alocados
+  SO:         Ubuntu 24.04.4 LTS
+  Disco:      457GB total
+================================================================

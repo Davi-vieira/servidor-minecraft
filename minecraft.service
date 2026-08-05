@@ -1,0 +1,36 @@
+[Unit]
+Description=Servidor Minecraft PaperMC
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=minecraft
+Group=minecraft
+WorkingDirectory=/home/minecraft/minecraft-server
+ExecStart=/home/minecraft/minecraft-server/start.sh
+# SIGTERM envia "stop" gracioso ao PaperMC antes de matar o processo
+KillSignal=SIGTERM
+# Tempo para o servidor salvar e encerrar antes de forcar o kill (segundos)
+TimeoutStopSec=60
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Protecao de seguranca do servico
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=false
+ReadWritePaths=/home/minecraft/minecraft-server
+PrivateTmp=true
+
+# Limites de recursos
+# LimitNOFILE: maximo de arquivos abertos (chunks, conexoes)
+LimitNOFILE=65536
+# MemoryMax: ajustado para notebook com 4-8GB de RAM
+# O start.sh aloca no maximo 4096MB para a JVM
+MemoryMax=5G
+
+[Install]
+WantedBy=multi-user.target
