@@ -1,5 +1,11 @@
 # 🎮 Servidor Minecraft PaperMC — Automatizado com Amazon Q
 
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.4-green?style=flat&logo=minecraft)
+![PaperMC](https://img.shields.io/badge/PaperMC-1.21.4--150-blue?style=flat)
+![Java](https://img.shields.io/badge/Java-21-orange?style=flat&logo=openjdk)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?style=flat&logo=ubuntu)
+![Shell](https://img.shields.io/badge/Shell-Script-black?style=flat&logo=gnubash)
+
 Projeto de servidor Minecraft completo, com instalação automatizada via scripts Shell, suporte a Java e Bedrock (celular/console), autenticação, proteção de terreno e túnel de rede sem precisar abrir portas no roteador.
 
 > **Este projeto foi desenvolvido com o auxílio do [Amazon Q Developer](https://aws.amazon.com/q/developer/)**, a IA da AWS integrada ao VS Code. Toda a lógica dos scripts, configurações e otimizações foram criadas em conjunto com a IA, o que acelerou muito o desenvolvimento e me ensinou boas práticas de Shell scripting e administração de servidores Linux.
@@ -58,6 +64,18 @@ servidor mine/
 - Ubuntu Server 24.04 LTS
 - Acesso root/sudo
 - Conexão com a internet
+- Mínimo 2GB de RAM (recomendado 4GB+)
+- Mínimo 10GB de espaço em disco
+
+### Versões suportadas
+
+| Software | Versão |
+|---|---|
+| Minecraft Java | 1.21.4 |
+| Minecraft Bedrock | 1.21.x (via GeyserMC) |
+| PaperMC | 1.21.4 build 150 |
+| Java | 21 (OpenJDK) |
+| Ubuntu | 24.04 LTS |
 
 ### Instalação em 1 comando
 
@@ -130,7 +148,17 @@ Se o servidor travar, ele reinicia automaticamente após 10 segundos — tanto p
 
 ---
 
-## 🔌 Plugins — Como Conectar
+## 🔌 Como Conectar ao Servidor
+
+### Configurar o Playit.gg (túnel de rede)
+Após rodar o `install.sh`, configure o túnel:
+```bash
+# O agente do Playit.gg inicia junto com o servidor
+# Acesse https://playit.gg e faça login
+# Seu endereço será gerado automaticamente (ex: xxxx.gl.joinmc.link)
+```
+
+### Conectar no servidor
 
 **Java (PC):**
 ```
@@ -145,6 +173,20 @@ Porta: 19132
 
 Jogadores Java precisam se registrar com `/register <senha> <senha>` na primeira vez.
 Jogadores Bedrock entram automaticamente via Floodgate (sem senha).
+
+### Virar admin após instalar
+```bash
+# Pare o serviço e inicie manualmente para acessar o console
+sudo systemctl stop minecraft
+cd /home/minecraft/minecraft-server
+sudo -u minecraft bash start.sh
+
+# No console do servidor, digite:
+op SEU_NICK
+
+# Depois no jogo:
+/lp user SEU_NICK parent set dono
+```
 
 ---
 
